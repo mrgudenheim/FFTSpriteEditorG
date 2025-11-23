@@ -401,6 +401,10 @@ static func load_opcode_data() -> void:
 	var opcode_filepath:String = "res://src/Extensions/FFTSpriteEditorG/SeqData/opcodeParameters.txt"
 	
 	var file := FileAccess.open(opcode_filepath, FileAccess.READ)
+	if file == null:
+		var error = FileAccess.get_open_error()
+		push_error(error)
+
 	var input: String = file.get_as_text()
 	
 	var lines: PackedStringArray = input.split("\n");
@@ -427,6 +431,10 @@ static func load_seq_name_data() -> void:
 	var filepath: String = "res://src/Extensions/FFTSpriteEditorG/SeqData/animation_names.txt"
 	
 	var file := FileAccess.open(filepath, FileAccess.READ)
+	if file == null:
+		var error = FileAccess.get_open_error()
+		push_error(error)
+
 	var input: String = file.get_as_text()
 	
 	var lines: PackedStringArray = input.split("\n");

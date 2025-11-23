@@ -492,8 +492,8 @@ func get_v_offset(shp: Shp, frame_index:int, subframe_index:int = 0, animation_i
 
 func add_subframe(subframe: SubFrameData, assembled_image: Image, source_image:Image, v_offset:int) -> Image:
 	var index_offset: int = 2 # skip past num_subframes and rotation_degrees
-	var x_shift: int = 		subframe.shift_x
-	var y_shift: int = 		subframe.shift_y
+	var x_shift: int = 		subframe.shift_x * 2
+	var y_shift: int = 		subframe.shift_y * 2
 	var x_top_left: int = 	subframe.load_location_x * 2
 	var y_top_left: int = 	(subframe.load_location_y + v_offset) * 2
 	var size_x: int = 		subframe.rect_size.x * 2

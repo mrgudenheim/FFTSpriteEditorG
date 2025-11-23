@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://cb6k0gorwq50e"]
 
-[ext_resource type="Script" path="res://src/Extensions/FFTSpriteEditorG/import_fft_dialog.gd" id="1_o1qng"]
-[ext_resource type="Script" path="res://src/Extensions/FFTSpriteEditorG/GudSubViewportContainer.gd" id="2_veaeo"]
-[ext_resource type="Script" path="res://src/Extensions/FFTSpriteEditorG/GudSubViewportControl.gd" id="3_qq5q3"]
-[ext_resource type="Shader" path="res://src/Extensions/FFTSpriteEditorG/PaletteSwap.gdshader" id="3_uprc7"]
+[ext_resource type="Script" uid="uid://b46htyuu3qcjw" path="res://src/Extensions/FFTSpriteEditorG/import_fft_dialog.gd" id="1_o1qng"]
+[ext_resource type="Script" uid="uid://bn1c2u57ikr88" path="res://src/Extensions/FFTSpriteEditorG/GudSubViewportContainer.gd" id="2_veaeo"]
+[ext_resource type="Script" uid="uid://dvv3vvydnju0j" path="res://src/Extensions/FFTSpriteEditorG/GudSubViewportControl.gd" id="3_qq5q3"]
+[ext_resource type="Shader" uid="uid://b8v64xpnqbkgq" path="res://src/Extensions/FFTSpriteEditorG/PaletteSwap.gdshader" id="3_uprc7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2dgq6"]
 shader = ExtResource("3_uprc7")
@@ -142,6 +142,7 @@ layout_mode = 2
 selected = 0
 item_count = 3
 popup/item_0/text = "Don't Import"
+popup/item_0/id = 0
 popup/item_1/text = "Overwrite Sprite#1"
 popup/item_1/id = 1
 popup/item_2/text = "Overwrite Portrait#1"
@@ -156,6 +157,7 @@ layout_mode = 2
 selected = 0
 item_count = 2
 popup/item_0/text = "Don't Swap"
+popup/item_0/id = 0
 popup/item_1/text = "Match current palette"
 popup/item_1/id = 1
 

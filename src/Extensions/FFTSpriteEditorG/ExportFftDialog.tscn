@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://b7ixs2q4203ro"]
 
-[ext_resource type="Script" path="res://src/Extensions/FFTSpriteEditorG/export_fft_dialog.gd" id="1_1o4b2"]
-[ext_resource type="Script" path="res://src/Extensions/FFTSpriteEditorG/GudSubViewportContainer.gd" id="2_1staw"]
-[ext_resource type="Script" path="res://src/Extensions/FFTSpriteEditorG/GudSubViewportControl.gd" id="2_vmdsg"]
-[ext_resource type="Shader" path="res://src/Extensions/FFTSpriteEditorG/PaletteSwap.gdshader" id="3_qxidp"]
+[ext_resource type="Script" uid="uid://eibpi15j8s37" path="res://src/Extensions/FFTSpriteEditorG/export_fft_dialog.gd" id="1_1o4b2"]
+[ext_resource type="Script" uid="uid://bn1c2u57ikr88" path="res://src/Extensions/FFTSpriteEditorG/GudSubViewportContainer.gd" id="2_1staw"]
+[ext_resource type="Script" uid="uid://dvv3vvydnju0j" path="res://src/Extensions/FFTSpriteEditorG/GudSubViewportControl.gd" id="2_vmdsg"]
+[ext_resource type="Shader" uid="uid://b8v64xpnqbkgq" path="res://src/Extensions/FFTSpriteEditorG/PaletteSwap.gdshader" id="3_qxidp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_thfla"]
 shader = ExtResource("3_qxidp")

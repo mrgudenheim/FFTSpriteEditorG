@@ -1,7 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://birggxam3fjnb"]
+[gd_scene load_steps=5 format=3 uid="uid://birggxam3fjnb"]
 
 [ext_resource type="PackedScene" uid="uid://3pmb60gpst7b" path="res://src/UI/Nodes/TransparentChecker.tscn" id="1"]
 [ext_resource type="Script" uid="uid://dskbcqwcf40j2" path="res://src/UI/Dialogs/ImageEffects/ResizeCanvas.gd" id="2"]
+[ext_resource type="Shader" uid="uid://c50kmfvf635kb" path="res://src/Shaders/TransparentChecker.gdshader" id="3_5y14m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_el557"]
+shader = ExtResource("3_5y14m")
+shader_parameter/size = 10.0
+shader_parameter/alpha = 1.0
+shader_parameter/color1 = Color(0.7, 0.7, 0.7, 1)
+shader_parameter/color2 = Color(1, 1, 1, 1)
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/scale = Vector2(0, 0)
+shader_parameter/rect_size = Vector2(0, 0)
+shader_parameter/follow_movement = false
+shader_parameter/follow_scale = false
 
 [node name="ResizeCanvas" type="ConfirmationDialog"]
 canvas_item_default_texture_filter = 0
@@ -104,7 +117,10 @@ stretch_mode = 5
 
 [node name="TransparentChecker" parent="VBoxContainer/AspectRatioContainer" instance=ExtResource("1")]
 show_behind_parent = true
+material = SubResource("ShaderMaterial_el557")
+layout_direction = 2
 layout_mode = 2
+mouse_filter = 2
 
 [connection signal="about_to_popup" from="." to="." method="_on_about_to_popup"]
 [connection signal="confirmed" from="." to="." method="_on_confirmed"]

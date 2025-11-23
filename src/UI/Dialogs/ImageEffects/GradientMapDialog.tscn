@@ -8,7 +8,7 @@
 title = "Gradient Map"
 script = ExtResource("3")
 
-[node name="VBoxContainer" parent="." index="3"]
+[node name="VBoxContainer" parent="." index="2"]
 offset_bottom = 342.0
 
 [node name="ShowAnimate" parent="VBoxContainer" index="0"]

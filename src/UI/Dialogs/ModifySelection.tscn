@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://csbfkgg4y0vxc" path="res://src/UI/Dialogs/ModifySelection.gd" id="1_w6rs7"]
 
 [node name="ModifySelection" type="ConfirmationDialog"]
+oversampling_override = 1.0
 title = "Expand selection"
 position = Vector2i(0, 36)
 size = Vector2i(266, 152)

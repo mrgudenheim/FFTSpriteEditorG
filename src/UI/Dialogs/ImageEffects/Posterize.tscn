@@ -9,7 +9,7 @@ title = "Posterize"
 size = Vector2i(360, 348)
 script = ExtResource("3")
 
-[node name="VBoxContainer" parent="." index="3"]
+[node name="VBoxContainer" parent="." index="2"]
 offset_bottom = 299.0
 
 [node name="ShowAnimate" parent="VBoxContainer" index="0"]

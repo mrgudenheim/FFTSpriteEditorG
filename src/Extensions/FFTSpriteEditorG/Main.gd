@@ -416,7 +416,7 @@ func select_subframes(frame_index: int, shp: Shp):
 		var size_x: int = 		shp.get_frame(frame_index, submerged_depth_options.selected).subframes[subframe_index].rect_size.x
 		var size_y: int = 		shp.get_frame(frame_index, submerged_depth_options.selected).subframes[subframe_index].rect_size.y
 		
-		var subframeRect: Rect2i = Rect2i(x_top_left, y_top_left, size_x, size_y)
+		var subframeRect: Rect2i = Rect2i(x_top_left * 2, y_top_left * 2, size_x * 2, size_y * 2)
 		#print(subframeRect)
 		ExtensionsApi.selection.select_rect(subframeRect, 0)
 
@@ -442,7 +442,7 @@ func get_assembled_frame(frame_index: int, shp:Shp, cel_image: Image, animation_
 	var source_image: Image = cel_image
 	
 	for subframe_index in range(num_subframes-1, -1, -1): # reverse order to layer them correctly 
-		var v_offset:int = get_v_offset(shp, frame_index, subframe_index, animation_index)	
+		var v_offset:int = get_v_offset(shp, frame_index, subframe_index, animation_index)
 		
 		var subframe_in_bottom:bool = frame_index >= shp.attack_start_index
 		var use_sp2:bool = (shp.file_name.contains("mon") 
@@ -494,10 +494,10 @@ func add_subframe(subframe: SubFrameData, assembled_image: Image, source_image:I
 	var index_offset: int = 2 # skip past num_subframes and rotation_degrees
 	var x_shift: int = 		subframe.shift_x
 	var y_shift: int = 		subframe.shift_y
-	var x_top_left: int = 	subframe.load_location_x
-	var y_top_left: int = 	subframe.load_location_y + v_offset
-	var size_x: int = 		subframe.rect_size.x
-	var size_y: int = 		subframe.rect_size.y
+	var x_top_left: int = 	subframe.load_location_x * 2
+	var y_top_left: int = 	(subframe.load_location_y + v_offset) * 2
+	var size_x: int = 		subframe.rect_size.x * 2
+	var size_y: int = 		subframe.rect_size.y * 2
 	var flip_x : bool = 		subframe.flip_x
 	var flip_y : bool = 		subframe.flip_y
 	

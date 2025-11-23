@@ -1,0 +1,12 @@
+{
+	"name": "FFTSpriteEditorG",
+	"display_name": "FFTSpriteEditorG",
+	"description": "Shows the assembled frames and animations when working with spritesheets compatible with Final Fantasy Tactics",
+	"author": "MrGudenheim",
+	"version": "1.11",
+	"supported_api_versions": [8],
+	"license": "MIT",
+	"nodes": [
+		"Main.tscn"
+	]
+}
